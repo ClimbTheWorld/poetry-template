@@ -1,0 +1,61 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: run poetry pytest",
+            "type": "debugpy",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "module": "pytest",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+        },
+        {
+            "name": "pytest test_app.test_run",
+            "type": "debugpy",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/"
+            },
+            "module": "pytest",
+            "args": ["tests/test_app.py::test_run"],
+            "cwd": "${workspaceFolder}",
+        },
+        {
+            "name": "pytest test_app.test_name",
+            "type": "debugpy",
+            "request": "launch",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/"
+            },
+            "module": "pytest",
+            "args": ["tests/test_app.py::test_name"],
+            "cwd": "${workspaceFolder}",
+        },
+        {
+            "name": "Python: execute app.py argument A",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/packagename/app.py",
+            "args": ["--argumentA"],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: execute app.py argumentAandB",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/packagename/app.py",
+            "args": ["-a", "-b"],
+            "console": "integratedTerminal"
+        }
+    ]
+}

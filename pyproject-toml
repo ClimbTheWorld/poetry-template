@@ -1,0 +1,38 @@
+[tool.poetry.dependencies]
+python = ">=3.12.0"
+python-dotenv = "<0.22.0" # for compatibility with ggshield v>1.39.0 (this is it today 20250501)
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">8.3.4"
+pytest-html = ">4.1.1"
+pytest-xdist = ">3.6.1"
+pytest-timeout = ">2.3.1"
+
+pre-commit = ">4.0.1"
+isort = ">5.13.2"
+python-dotenv = "<0.22.0"
+flake8 = ">7.1.1"
+black = ">24.10.0"
+pylint = ">3.3.3"
+vulture = ">2.14"
+
+pyinstaller = ">6.12.0"
+
+[virtualenvs]
+in-project = true
+create = true
+always-copy = true
+no-pip = false
+no-setuptools = false
+system-site-packages = false
+path = ".venv"
+prefer-active-python = false
+prompt = "{project_name}-py{python_version}"
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::DeprecationWarning",
+                "ignore::FutureWarning"]
+addopts = "-rfp -v -s -n auto"
+pythonpath = "src"
+markers = [
+    ]

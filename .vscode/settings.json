@@ -1,0 +1,33 @@
+{
+    "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
+    "python.poetryPath": "c:/Users/name/.local/bin/poetry.exe",
+    "python.globalModuleInstallation": false,
+    "python.terminal.activateEnvironment": true,
+    "files.autoSave": "onFocusChange",
+    "CodeGPT.apiKey": "OpenAI",
+    "python.autoComplete.extraPaths": [
+        "./src"
+    ],
+    "python.testing.pytestArgs": ["tests"],
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.testing.cwd": "${workspaceFolder}",
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.autoIndent": true,
+    "pdf.viewer": "external",
+    "pdf.externalViewerPath": "C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+    "history-in-sublime-merge.path": "",
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "dataWrangler.experiments.datatypes.pyspark": true
+}

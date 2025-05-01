@@ -1,0 +1,54 @@
+repos:
+  - repo: local
+    hooks:
+      - id: add-md-linebreaks
+        name: Add Markdown trailing spaces
+        entry: poetry run python .hooks/add-md-linebreaks.py
+        language: python
+        types: [markdown]
+        files: \.md$
+
+  - repo: https://github.com/ambv/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        name: black
+        language_version: python3.13
+        exclude: ^(.*/)?\.venv/.*\.py$
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 6.0.0
+    hooks:
+      - id: isort
+        name: isort
+        language: system
+        types: [ python ]
+        exclude: ^(.*/)?\.venv/.*\.py$
+
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0  # or the latest stable
+    hooks:
+      - id: flake8
+        name: flake8
+        language: system
+        types: [ python ]
+        args: [--config=.flake8]
+        exclude: ^(.*/)?\.venv/.*\.py$
+
+  - repo: https://github.com/PyCQA/pylint
+    rev: v3.3.3
+    hooks:
+      - id: pylint
+        name: pylint
+        language: system
+        types: [ python ]
+        args: [--rcfile=.pylintrc, -v]
+        #files: ^main\.py$
+  - repo: local
+    hooks:
+      - id: ggshield
+        name: ggshield secret scan pre-commit
+        entry: ggshield
+        language: system  # uses your system-installed ggshield
+        types: [text]
+        args: ["secret", "scan", "pre-commit"]

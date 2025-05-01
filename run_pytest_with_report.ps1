@@ -1,0 +1,1 @@
+pytest -n auto --timeout=180 --html=artifacts/reports/pytest-report.html

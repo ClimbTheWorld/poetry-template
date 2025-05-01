@@ -11,6 +11,7 @@ __pycache__/
 build/
 develop-eggs/
 dist/
+# AWS User-specific
 downloads/
 eggs/
 .eggs/
@@ -22,24 +23,43 @@ var/
 wheels/
 share/python-wheels/
 *.egg-info/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
 .installed.cfg
 *.egg
 MANIFEST
 
 # PyInstaller
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# Gradle and Maven with auto-import
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
+# auto-import.
+# .idea/artifacts
+# .idea/compiler.xml
+# .idea/jarRepositories.xml
+# .idea/modules.xml
 *.manifest
+# .idea/modules
+# *.iml
 *.spec
 
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
 
 # Unit test / coverage reports
+*.iws
 htmlcov/
+# IntelliJ
 .tox/
 .nox/
+# mpeltonen/sbt-idea plugin
 .coverage
 .coverage.*
 .cache
@@ -51,6 +71,7 @@ coverage.xml
 .pytest_cache/
 cover/
 
+# SonarLint plugin
 # Translations
 *.mo
 *.pot
@@ -60,6 +81,7 @@ cover/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+fabric.properties
 
 # Flask stuff:
 instance/
@@ -131,6 +153,8 @@ celerybeat.pid
 .env
 .venv
 env/
+docs_build
+site_build
 venv/
 ENV/
 env.bak/
@@ -159,6 +183,9 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+.test-artifacts
+
+.env
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
@@ -169,3 +196,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+!.pre-commit-config.yaml
+!.flake8
+!.pylintrc
+
